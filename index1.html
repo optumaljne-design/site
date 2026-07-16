@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lakeside Hotel Casino | Hotel, Casino & Entertainment in Iowa</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      min-height: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #172033;
+      background: #f4f0e8;
+      overflow-x: hidden;
+    }
+
+    .site {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top left, rgba(211, 160, 67, 0.28), transparent 34%),
+        linear-gradient(180deg, #fbf6ec 0%, #efe6d6 44%, #f7f3eb 100%);
+    }
+
+    .topbar {
+      width: 100%;
+      padding: 18px 22px;
+      background: rgba(255, 255, 255, 0.72);
+      border-bottom: 1px solid rgba(23, 32, 51, 0.08);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .topbar-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 950;
+      color: #172033;
+      letter-spacing: -0.03em;
+      font-size: 18px;
+    }
+
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #172033, #39506b);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #f7d48a;
+      font-weight: 950;
+      box-shadow: 0 10px 24px rgba(23, 32, 51, 0.18);
+    }
+
+    .nav-note {
+      color: rgba(23, 32, 51, 0.72);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .hero {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 58px 22px 34px;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .hero-copy {
+      padding: 10px 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: #ffffff;
+      border: 1px solid rgba(23, 32, 51, 0.08);
+      color: #8b5b11;
+      font-size: 12px;
+      font-weight: 950;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      box-shadow: 0 10px 26px rgba(23, 32, 51, 0.07);
+    }
+
+    .eyebrow span {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #d7a13e;
+      box-shadow: 0 0 0 5px rgba(215, 161, 62, 0.16);
+    }
+
+    h1 {
+      margin: 22px 0 18px;
+      color: #172033;
+      font-size: 58px;
+      line-height: 0.98;
+      letter-spacing: -0.06em;
+      max-width: 760px;
+    }
+
+    .hero-text {
+      margin: 0;
+      color: rgba(23, 32, 51, 0.78);
+      font-size: 19px;
+      line-height: 1.65;
+      max-width: 730px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      display: inline-block;
+      padding: 14px 22px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 950;
+      font-size: 14px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #172033, #2f4660);
+      color: #ffffff;
+      box-shadow: 0 16px 30px rgba(23, 32, 51, 0.22);
+    }
+
+    .btn-secondary {
+      background: #ffffff;
+      color: #172033;
+      border: 1px solid rgba(23, 32, 51, 0.11);
+      box-shadow: 0 12px 24px rgba(23, 32, 51, 0.08);
+    }
+
+    .btn-primary:hover,
+    .btn-secondary:hover {
+      transform: translateY(-1px);
+    }
+
+    .hero-panel {
+      position: relative;
+      min-height: 510px;
+      border-radius: 34px;
+      overflow: hidden;
+      background:
+        linear-gradient(rgba(13, 21, 34, 0.14), rgba(13, 21, 34, 0.54)),
+        url("https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1100&q=80");
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 28px 70px rgba(23, 32, 51, 0.24);
+      border: 1px solid rgba(255, 255, 255, 0.55);
+    }
+
+    .floating-card {
+      position: absolute;
+      left: 22px;
+      right: 22px;
+      bottom: 22px;
+      padding: 20px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid rgba(255, 255, 255, 0.76);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 22px 44px rgba(0, 0, 0, 0.22);
+    }
+
+    .floating-card strong {
+      display: block;
+      color: #172033;
+      font-size: 22px;
+      line-height: 1.15;
+      letter-spacing: -0.04em;
+      margin-bottom: 8px;
+    }
+
+    .floating-card p {
+      margin: 0;
+      color: rgba(23, 32, 51, 0.76);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .quick-grid {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 8px 22px 28px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .quick-card {
+      background: #ffffff;
+      border: 1px solid rgba(23, 32, 51, 0.08);
+      border-radius: 22px;
+      padding: 22px;
+      box-shadow: 0 16px 38px rgba(23, 32, 51, 0.08);
+    }
+
+    .quick-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f5ead2;
+      color: #8b5b11;
+      font-weight: 950;
+      margin-bottom: 14px;
+    }
+
+    .quick-card strong {
+      display: block;
+      color: #172033;
+      font-size: 17px;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    .quick-card span {
+      display: block;
+      color: rgba(23, 32, 51, 0.68);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .content-wrap {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 26px 22px 60px;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 26px;
+      align-items: start;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 92px;
+      background: #172033;
+      color: #ffffff;
+      border-radius: 26px;
+      padding: 24px;
+      box-shadow: 0 18px 40px rgba(23, 32, 51, 0.18);
+    }
+
+    .sidebar-title {
+      margin: 0 0 12px;
+      color: #f7d48a;
+      font-size: 18px;
+      line-height: 1.2;
+      font-weight: 950;
+      letter-spacing: -0.03em;
+    }
+
+    .sidebar p {
+      margin: 0 0 18px;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .sidebar-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .sidebar-list a {
+      color: #ffffff;
+      text-decoration: none;
+      padding: 11px 12px;
+      border-radius: 13px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 13px;
+      font-weight: 850;
+    }
+
+    .article {
+      background: rgba(255, 255, 255, 0.76);
+      border: 1px solid rgba(23, 32, 51, 0.08);
+      border-radius: 30px;
+      padding: 36px;
+      box-shadow: 0 18px 42px rgba(23, 32, 51, 0.08);
+    }
+
+    .section {
+      padding: 4px 0 22px;
+      margin-bottom: 6px;
+      border-bottom: 1px solid rgba(23, 32, 51, 0.08);
+    }
+
+    .section:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    h2 {
+      margin: 0 0 13px;
+      color: #172033;
+      font-size: 30px;
+      line-height: 1.15;
+      letter-spacing: -0.04em;
+    }
+
+    p {
+      margin: 0 0 16px;
+      color: rgba(23, 32, 51, 0.76);
+      font-size: 17px;
+      line-height: 1.72;
+    }
+
+    .callout {
+      margin: 24px 0 6px;
+      padding: 24px;
+      border-radius: 24px;
+      background:
+        linear-gradient(135deg, rgba(247, 212, 138, 0.34), rgba(255, 255, 255, 0.9));
+      border: 1px solid rgba(139, 91, 17, 0.14);
+    }
+
+    .callout h2 {
+      font-size: 26px;
+    }
+
+    .bottom-note {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 22px 44px;
+    }
+
+    .bottom-note-inner {
+      background: #172033;
+      color: #ffffff;
+      border-radius: 24px;
+      padding: 22px 24px;
+      box-shadow: 0 18px 38px rgba(23, 32, 51, 0.18);
+    }
+
+    .bottom-note-inner p {
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 13px;
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    @media (max-width: 980px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 38px;
+      }
+
+      .hero-panel {
+        min-height: 380px;
+      }
+
+      .quick-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .content-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: static;
+      }
+
+      .sidebar-list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      h1 {
+        font-size: 46px;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .topbar {
+        padding: 14px 14px;
+      }
+
+      .topbar-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .nav-note {
+        font-size: 12px;
+      }
+
+      .hero {
+        padding: 30px 14px 24px;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      .hero-text {
+        font-size: 16px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        width: 100%;
+        text-align: center;
+      }
+
+      .hero-panel {
+        min-height: 330px;
+        border-radius: 26px;
+      }
+
+      .floating-card {
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+      }
+
+      .quick-grid {
+        grid-template-columns: 1fr;
+        padding: 4px 14px 20px;
+      }
+
+      .content-wrap {
+        padding: 20px 14px 44px;
+      }
+
+      .article {
+        padding: 24px 18px;
+        border-radius: 24px;
+      }
+
+      h2 {
+        font-size: 25px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+
+      .sidebar-list {
+        grid-template-columns: 1fr;
+      }
+
+      .bottom-note {
+        padding: 0 14px 34px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="site">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="brand">
+          <div class="brand-mark">L</div>
+          <div>Lakeside Hotel Casino Guide</div>
+        </div>
+        <div class="nav-note">Informational travel and hospitality research for UK users</div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow"><span></span> Hotel • Casino • Entertainment</div>
+
+          <h1>Lakeside Hotel Casino in Osceola, Iowa</h1>
+
+          <p class="hero-text">
+            Lakeside Hotel Casino is a hotel, casino and entertainment destination that may be relevant for users in the United Kingdom who are researching casino hotels, US travel, Midwest leisure stays and entertainment-focused accommodation.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn-primary" href="https://lakesidehotelcasino.com" target="_blank" rel="noopener noreferrer">Visit Official Website</a>
+            <a class="btn-secondary" href="#planning">Plan Your Research</a>
+          </div>
+        </div>
+
+        <div class="hero-panel">
+          <div class="floating-card">
+            <strong>Hotel rooms, casino leisure, dining and events in one destination.</strong>
+            <p>
+              Located in Osceola, Iowa, the property can be researched as part of a wider US travel or Midwest leisure itinerary.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="quick-grid">
+        <div class="quick-card">
+          <div class="quick-icon">01</div>
+          <strong>Hotel Accommodation</strong>
+          <span>Comfort, room availability, guest services and convenient access to resort facilities.</span>
+        </div>
+
+        <div class="quick-card">
+          <div class="quick-icon">02</div>
+          <strong>Casino Entertainment</strong>
+          <span>Gaming and leisure options for eligible adult guests as part of a broader visit.</span>
+        </div>
+
+        <div class="quick-card">
+          <div class="quick-icon">03</div>
+          <strong>Dining & Events</strong>
+          <span>Food, entertainment, social spaces and event options help round out the stay.</span>
+        </div>
+
+        <div class="quick-card">
+          <div class="quick-icon">04</div>
+          <strong>Midwest Travel</strong>
+          <span>A relevant option for users comparing Iowa travel and regional casino hotels.</span>
+        </div>
+      </section>
+
+      <section class="content-wrap">
+        <aside class="sidebar">
+          <h3 class="sidebar-title">Research Guide</h3>
+          <p>
+            Use this page as a simple overview before checking current details through official sources.
+          </p>
+
+          <div class="sidebar-list">
+            <a href="#overview">Overview</a>
+            <a href="#hotel">Accommodation</a>
+            <a href="#casino">Casino Leisure</a>
+            <a href="#planning">UK Travel Research</a>
+          </div>
+        </aside>
+
+        <article class="article">
+          <section class="section" id="overview">
+            <h2>A Casino Hotel Destination for UK Travel Research</h2>
+
+            <p>
+              Lakeside Hotel Casino is located in Osceola, Iowa, and brings together hotel rooms, casino entertainment, dining, events and guest services in one convenient setting. For UK users, Lakeside Hotel Casino can be explored as a practical casino hotel option for travellers who want to learn more about accommodation, gaming, food, entertainment and regional travel in the United States.
+            </p>
+
+            <p>
+              A casino hotel offers more than a standard hotel stay because it combines accommodation with leisure and entertainment. Guests can use the hotel as a base for an overnight visit, weekend stay, road trip or wider travel plan while also having access to casino entertainment and on-site services.
+            </p>
+
+            <p>
+              This makes Lakeside Hotel Casino relevant for users in the United Kingdom who are comparing casino hotels in the United States, Iowa travel options, Midwest destinations or hotel casino experiences that include more than just a room.
+            </p>
+          </section>
+
+          <section class="section" id="hotel">
+            <h2>Hotel Accommodation and Guest Convenience</h2>
+
+            <p>
+              Hotel accommodation is an important part of the Lakeside Hotel Casino experience. Travellers often look for comfort, convenience, location, room availability, guest services and easy access to dining and entertainment.
+            </p>
+
+            <p>
+              For UK users researching travel in the United States, the property can be considered as part of a wider itinerary where accommodation and casino leisure are available in one place. Visitors may want to compare official room details, amenities, transport options, prices, booking terms and local attractions before making a decision.
+            </p>
+          </section>
+
+          <section class="section" id="casino">
+            <h2>Casino Entertainment as Part of the Wider Stay</h2>
+
+            <p>
+              Casino entertainment is also a key part of Lakeside Hotel Casino, but it should be understood as one part of a broader hospitality experience. The casino adds leisure and gaming options for eligible guests, while the hotel, dining and event features help create a more complete visit.
+            </p>
+
+            <p>
+              Casino activity should always be approached responsibly and only by guests who meet all legal age, identification, entry and local regulatory requirements. This page does not promise winnings, financial results or guaranteed outcomes.
+            </p>
+
+            <div class="callout">
+              <h2>Dining, Events and Guest Services</h2>
+
+              <p>
+                Dining, events and guest services help support the overall experience at Lakeside Hotel Casino. A well-rounded casino hotel should offer more than gaming alone, giving guests places to eat, relax, meet others and enjoy time on the property.
+              </p>
+
+              <p>
+                Some visitors may be focused mainly on accommodation and dining, while others may be interested in casino entertainment, events or a complete leisure getaway. This balance can make the property useful for travellers who want a practical hotel casino experience with several services available in one location.
+              </p>
+            </div>
+          </section>
+
+          <section class="section" id="planning">
+            <h2>Planning a Visit from the United Kingdom</h2>
+
+            <p>
+              For users in the United Kingdom, planning a visit to a casino hotel in the United States should include careful research. Travellers should review flight routes, ground transport, travel documents, insurance, local rules, age requirements, identification policies and booking terms before confirming any trip.
+            </p>
+
+            <p>
+              Hotel details, casino access, restaurant availability, event schedules, prices and guest requirements may change over time, so the safest approach is always to check the official Lakeside Hotel Casino website before making any booking or travel decision.
+            </p>
+
+            <p>
+              Lakeside Hotel Casino is best understood as a hospitality and entertainment property where casino leisure is part of a wider guest experience. UK users who are interested in casino hotels may be looking for a balance of accommodation, convenience, dining, entertainment and responsible leisure.
+            </p>
+
+            <p>
+              Visitors should always use official sources to confirm current details, bookings, terms, availability and guest requirements. Lakeside Hotel Casino is presented here as a hotel, casino and entertainment destination, with casino leisure included as one part of a broader travel experience rather than the only focus.
+            </p>
+
+            <p>
+              Lakeside Hotel Casino may be interesting for travellers who want hotel accommodation, casino entertainment, dining, events and leisure in Osceola, Iowa. The decision to visit any casino hotel should always be made with clear information, realistic expectations, personal limits and responsible behaviour.
+            </p>
+          </section>
+        </article>
+      </section>
+
+      <section class="bottom-note">
+        <div class="bottom-note-inner">
+          <p>
+            Informational hotel and casino content for users in the United Kingdom interested in Lakeside Hotel Casino, hotel accommodation, casino entertainment, dining, events, leisure experiences, Midwest travel and responsible hospitality research. Casino entertainment is intended for eligible adults only. Always confirm the latest information directly through official sources before making any booking or casino-related decision.
+          </p>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
